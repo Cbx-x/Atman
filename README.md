@@ -24,7 +24,8 @@ The platform automates asset discovery, subdomain enumeration, endpoint identifi
 
 ## System Architecture
 
-![Atman System Architecture](screenshots/system-architecture.png)
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/efa738a9-dc89-4389-b817-e05aeeb00c7e" />
+
 
 ## Technology Stack
 
