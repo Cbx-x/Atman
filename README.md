@@ -77,7 +77,8 @@ The platform automates asset discovery, subdomain enumeration, endpoint identifi
 
 ## Dashboard
 
-![Dashboard Overview](screenshots/dashboard.png)
+![Dashboard Overview](<img width="600" height="300" alt="WhatsApp Image 2025-12-20 at 12 19 09 PM (2)" src="https://github.com/user-attachments/assets/d1140e36-16a1-4916-b88d-2413de3bb3fb" />
+)
 
 The dashboard provides:
 
