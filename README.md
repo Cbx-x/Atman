@@ -92,7 +92,8 @@ The dashboard provides:
 
 ### Step 1: Add Target
 
-![Add Target](screenshots/add-target.png)
+<img width="800" height="300" alt="WhatsApp Image 2025-12-20 at 12 19 10 PM (1)" src="https://github.com/user-attachments/assets/ee079fc1-e273-4ab2-838c-383fc9f43aa5" />
+
 
 Provide a domain name, IP address, CIDR range, or URL.
 
