@@ -92,14 +92,16 @@ The dashboard provides:
 
 ### Step 1: Add Target
 
-<img width="800" height="300" alt="WhatsApp Image 2025-12-20 at 12 19 10 PM (1)" src="https://github.com/user-attachments/assets/ee079fc1-e273-4ab2-838c-383fc9f43aa5" />
+<img width="600" height="300" alt="WhatsApp Image 2025-12-20 at 12 19 03 PM" src="https://github.com/user-attachments/assets/6df48028-3c11-4a46-9807-3269661d1de0" />
+
 
 
 Provide a domain name, IP address, CIDR range, or URL.
 
 ### Step 2: Select Scan Type
 
-![Select Scan Type](screenshots/select-scan.png)
+<img width="600" height="300" alt="WhatsApp Image 2025-12-20 at 12 19 01 PM" src="https://github.com/user-attachments/assets/d185547d-7dd3-4039-ab7f-7a636bef0d74" />
+
 
 Available scan options:
 
@@ -110,15 +112,12 @@ Available scan options:
 * Vulnerability Scan
 * Full Scan
 
-### Step 3: Execute Scan
-
-![Scan Execution](screenshots/scan-execution.png)
-
 The platform performs asynchronous reconnaissance and vulnerability assessment.
 
-### Step 4: Analyze Results
+### Step 3: Execute Scan & Analyze Results
 
-![Vulnerability Overview](screenshots/vulnerability-overview.png)
+<img width="600" height="300" alt="WhatsApp Image 2025-12-20 at 12 19 03 PM (1)" src="https://github.com/user-attachments/assets/98a35c42-908e-49f3-ae50-62952915a359" />
+
 
 View:
 
@@ -175,13 +174,6 @@ atman-security/
 └── docker-compose.yml
 ```
 
-## Team Members
-
-* Member 1 – Project Lead / Backend Development
-* Member 2 – Frontend Development
-* Member 3 – Reconnaissance Modules & Security Testing
-* Member 4 – DevOps, Documentation & Deployment
-
 ## Future Enhancements
 
 * AI-based vulnerability prioritization
@@ -189,10 +181,6 @@ atman-security/
 * Multi-cloud asset discovery
 * Container and Kubernetes security
 * Threat intelligence integration
-
-## License
-
-This project is developed for academic and research purposes.
 
 ## Acknowledgements
 
