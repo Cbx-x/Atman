@@ -1,275 +1,202 @@
-#⭐ ATMAN – Advanced Web Reconnaissance & Vulnerability Intelligence Framework
+# Atman: Autonomous Reconnaissance and Intelligence Platform
 
-Atman is a powerful, modern, and highly configurable web reconnaissance framework designed for penetration testers, bug bounty hunters, and security teams.
-It automates deep reconnaissance, vulnerability scanning, data intelligence, and continuous monitoring — giving you a complete picture of an application’s attack surface.
+An intelligent cybersecurity platform for automated asset discovery, reconnaissance, vulnerability detection, and real-time security intelligence.
 
-Atman correlates reconnaissance data using a database-backed architecture and offers intelligent GPT-powered insights, attack surface suggestions, and vulnerability descriptions.
+## Overview
 
-🚀 What is Atman?
+Atman is a centralized reconnaissance and vulnerability management platform designed to help security teams, researchers, and organizations continuously monitor their external attack surface.
 
-Atman is a next-generation web reconnaissance suite built to simplify and accelerate information gathering.
-It combines:
+The platform automates asset discovery, subdomain enumeration, endpoint identification, service fingerprinting, vulnerability scanning, and reporting through a unified dashboard.
 
-Automated subdomain discovery
+## Key Features
 
-Port and service enumeration
+* Automated asset discovery
+* Subdomain enumeration and monitoring
+* Port scanning and service fingerprinting
+* Vulnerability detection and classification
+* OSINT data collection
+* Real-time scan progress updates
+* Severity-based vulnerability prioritization
+* Interactive security dashboard
+* Historical scan tracking
+* Role-Based Access Control (RBAC)
+* Report generation (PDF and CSV)
 
-Fuzzing & endpoint extraction
+## System Architecture
 
-Vulnerability scanning
+![Atman System Architecture](screenshots/system-architecture.png)
 
-OSINT enrichment
+## Technology Stack
 
-Continuous monitoring
+### Backend
 
-AI-driven recon intelligence
+* Python 3.10+
+* Django
+* Django REST Framework (DRF)
+* Celery
+* Redis
+* PostgreSQL
+* Django Channels
 
-…and organizes everything into structured workspaces for teams, freelancers, and bug bounty hunters.
+### Frontend
 
-If you want a complete start-to-end recon pipeline, Atman gives you everything in one unified platform.
+* Next.js
+* React
+* Tailwind CSS
+* ShadCN/UI
+* Redux Toolkit
+* Axios
+* SWR
+* Recharts
 
-🧠 Key Capabilities
-🔍 Deep Reconnaissance
+### Infrastructure
 
-Subdomain enumeration
+* Docker
+* Docker Compose
+* Nginx
+* AWS / DigitalOcean / Hetzner
 
-Alive host detection
+## Architecture Workflow
 
-IP & open port identification
+1. User initiates a reconnaissance scan.
+2. Backend validates requests and schedules tasks.
+3. Celery workers execute reconnaissance modules asynchronously.
+4. Redis manages task queues and messaging.
+5. Reconnaissance modules perform asset discovery and vulnerability assessment.
+6. Results are stored in PostgreSQL.
+7. Dashboard displays real-time intelligence and reports.
 
-Directory & file fuzzing
+## Reconnaissance Modules
 
-Endpoint extraction
+* Asset Discovery
+* Subdomain Enumeration
+* Port Scanning
+* Service Fingerprinting
+* Vulnerability Detection
+* OSINT Collection
 
-Screenshot capture
+## Dashboard
 
-WHOIS & WAF detection
+![Dashboard Overview](screenshots/dashboard.png)
 
-S3 bucket misconfiguration checks
+The dashboard provides:
 
-Automated vulnerability scanning using:
+* Total targets
+* Discovered subdomains
+* Active endpoints
+* Vulnerability statistics
+* Scan activity feed
+* Geographic asset distribution
 
-Nuclei
+## How It Works
 
-Dalfox
+### Step 1: Add Target
 
-CRLFuzzer
+![Add Target](screenshots/add-target.png)
 
-Additional recon and misconfiguration tools
+Provide a domain name, IP address, CIDR range, or URL.
 
-📡 OSINT Intelligence
+### Step 2: Select Scan Type
 
-Employee enumeration
+![Select Scan Type](screenshots/select-scan.png)
 
-Email harvesting
+Available scan options:
 
-Meta information gathering
+* Atman Recommended Scan
+* Subdomain Scan
+* Port Scan
+* OSINT Scan
+* Vulnerability Scan
+* Full Scan
 
-Google dorking for exposed files/URLs
+### Step 3: Execute Scan
 
-Related domain discovery
+![Scan Execution](screenshots/scan-execution.png)
 
-Related TLD mapping
+The platform performs asynchronous reconnaissance and vulnerability assessment.
 
-🗂 Workspaces & Project Management
+### Step 4: Analyze Results
 
-Organize recon data into separate, isolated workspaces such as:
+![Vulnerability Overview](screenshots/vulnerability-overview.png)
 
-Bug bounty programs
+View:
 
-Client pentests
+* Discovered assets
+* Active services
+* Vulnerabilities by severity
+* Historical scan data
 
-Internal audits
+## Installation
 
-Long-term recon campaigns
+### Prerequisites
 
-Each workspace has its own dashboard and data store.
+* Docker
+* Docker Compose
+* Git
 
-⚙️ Highly Configurable Scan Engines
+### Clone the Repository
 
-YAML-based scan configurations
+```bash
+git clone https://github.com/your-username/atman-security.git
+cd atman-security
+```
 
-Customizable concurrency, rate limits, timeouts
+### Start the Application
 
-Prebuilt engines (Full Scan, Passive Scan, OSINT Scan, Screenshot Scan)
+```bash
+docker-compose up --build
+```
 
-Add your own recon pipelines
+### Access the Platform
 
-Support for parallel scans and subscans
+Frontend:
 
-Subscans allow you to run additional scans instantly on newly discovered assets — without waiting for the main pipeline to finish.
+```text
+http://localhost:3000
+```
 
-📑 PDF Reporting
+Backend API:
 
-Generate fully customized PDF reports such as:
+```text
+http://localhost:8000
+```
 
-Full Recon Report
+## Project Structure
 
-Vulnerability Report
+```text
+atman-security/
+├── backend/
+├── frontend/
+├── docker/
+├── docs/
+├── screenshots/
+├── nginx/
+└── docker-compose.yml
+```
 
-OSINT Report
+## Team Members
 
-Customize:
+* Member 1 – Project Lead / Backend Development
+* Member 2 – Frontend Development
+* Member 3 – Reconnaissance Modules & Security Testing
+* Member 4 – DevOps, Documentation & Deployment
 
-Themes & colors
+## Future Enhancements
 
-Executive summary
+* AI-based vulnerability prioritization
+* Automated remediation workflows
+* Multi-cloud asset discovery
+* Container and Kubernetes security
+* Threat intelligence integration
 
-Footer & branding
+## License
 
-Company information
+This project is developed for academic and research purposes.
 
-🤖 GPT-Powered Intelligence
+## Acknowledgements
 
-Atman integrates GPT models to enhance recon quality:
+Developed as a Final Year Project at:
 
-🔎 Vulnerability Intelligence
+**Department of CSE (IoT & CSBT)**
 
-Human-like descriptions
-
-Impact analysis
-
-Remediation guidance
-
-Reference & context gathering
-
-🛡 Attack Surface Suggestions
-
-Based on:
-
-Page titles
-
-Open ports
-
-Technologies
-
-Subdomain patterns
-
-Historical weaknesses
-
-Atman recommends possible attack vectors with reasoning.
-
-🔔 Continuous Monitoring
-
-Schedule scans periodically or at exact times:
-
-Every X minutes
-
-Daily, weekly schedules
-
-Clocked scans at specific HH:MM
-
-Receive alerts for new:
-
-Subdomains
-
-Vulnerabilities
-
-Recon changes
-
-Supports notifications via:
-
-Slack
-
-Telegram
-
-Discord
-
-🧩 Advanced Recon Data Correlation
-
-Using database-backed storage, Atman offers:
-
-Smart duplicate removal
-
-Recon data change detection
-
-Autosuggestion-based filtering
-
-Query language for recon filtering:
-
-http_status=200&name=admin
-
-
-Recon data visualization
-
-Activity insights (most vulnerable assets, most common CVEs, etc.)
-
-🧰 Toolbox
-
-Atman ships with helpful built-in tools:
-
-WHOIS lookup
-
-CMS identification
-
-CVE lookup
-
-URL extraction utilities
-
-Import/export of endpoints & subdomains
-
-You can add custom tools or external GitHub/Go-based utilities.
-
-👤 User Roles & Permissions
-
-Teams can assign:
-
-🔐 System Administrator
-
-Full control over system configuration, scan engines, users, and tools.
-
-🔍 Penetration Tester
-
-Can create/edit targets, initiate scans, and manage recon — without editing system-level configs.
-
-📊 Auditor
-
-View-only access with ability to download reports.
-
-🚀 Quick Installation (Ubuntu / VPS)
-git clone https://github.com/jeevaninja/Atman
-cd Atman
-
-Configure environment:
-nano .env
-
-
-Update:
-
-POSTGRES_PASSWORD
-
-(Optional) Admin credentials for non-interactive install
-
-Optional admin setup:
-DJANGO_SUPERUSER_USERNAME=admin
-DJANGO_SUPERUSER_EMAIL=admin@example.com
-DJANGO_SUPERUSER_PASSWORD=yourStrongPassword
-
-Run installation:
-sudo ./install.sh
-
-
-For non-interactive installation:
-
-sudo ./install.sh -n
-
-
-Access Atman at:
-
-https://127.0.0.1
-
-
-or your VPS public IP.
-
-🛠 Updating Atman
-cd Atman
-sudo ./update.sh
-
-
-If needed:
-
-sudo chmod +x update.sh
-
-🛡 Reporting Security Issues
-
-Please submit responsible disclosures via GitHub’s private vulnerability reporting system.
+SEA College of Engineering and Technology, Bengaluru
